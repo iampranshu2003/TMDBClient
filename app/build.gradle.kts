@@ -16,6 +16,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String","API_KEY","\"078a27b15892f1e2f7b62279a9149e7e\"")
     }
 
     buildTypes {
@@ -36,6 +38,9 @@ android {
     }
     dataBinding {
         enable = true
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -65,13 +70,19 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //coroutine dependency
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+    //dagger dependency
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+    //retrofit dependency
     implementation(libs.retrofit)
+    //gson dependency
     implementation(libs.converter.gson)
+    //interceptor dependency for logging
     implementation(libs.logging.interceptor)
+    //glide dependency
     implementation(libs.glide)
     kapt(libs.compiler)
 }
