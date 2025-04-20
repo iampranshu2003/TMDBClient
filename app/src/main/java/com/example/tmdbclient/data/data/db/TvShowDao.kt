@@ -9,10 +9,10 @@ import com.example.tmdbclient.data.data.model.tvshow.TvShow
 @Dao
 interface TvShowDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMovies(tvShow: List<TvShow>)
+    suspend fun saveTvShows(tvShow: List<TvShow>)
 
     @Query("DELETE FROM popular_tvShows")
-    suspend fun deleteAllMovies()
+    suspend fun deleteAllTvShows()
 
     @Query("SELECT * FROM popular_tvShows")
     suspend fun getTvShows(): List<TvShow>
