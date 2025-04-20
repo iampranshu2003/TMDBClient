@@ -4,6 +4,6 @@ import com.example.tmdbclient.data.data.model.movie.Movie
 import com.example.tmdbclient.domain.repository.MovieRepository
 
 class UpdateMoviesUsecase(private val movieRepository: MovieRepository) {
-    suspend fun updateMovies():List<Movie>? = movieRepository.updateMovies()
+    suspend fun execute():List<Movie>? = movieRepository.updateMovies()
     
 }
