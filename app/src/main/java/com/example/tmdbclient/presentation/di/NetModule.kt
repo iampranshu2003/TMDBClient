@@ -10,6 +10,8 @@ import javax.inject.Singleton
 @Module
 class NetModule(private val baseUrl: String) {
 
+
+    @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
