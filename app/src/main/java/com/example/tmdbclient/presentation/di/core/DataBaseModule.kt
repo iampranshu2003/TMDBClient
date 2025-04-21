@@ -1,4 +1,4 @@
-package com.example.tmdbclient.presentation.di
+package com.example.tmdbclient.presentation.di.core
 
 import android.content.Context
 import androidx.room.Room
@@ -6,7 +6,6 @@ import com.example.tmdbclient.data.data.db.ArtistDao
 import com.example.tmdbclient.data.data.db.MovieDao
 import com.example.tmdbclient.data.data.db.TMDBDatabase
 import com.example.tmdbclient.data.data.db.TvShowDao
-import com.example.tmdbclient.data.data.model.tvshow.TvShow
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

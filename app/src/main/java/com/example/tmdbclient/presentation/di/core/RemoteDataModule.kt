@@ -1,4 +1,4 @@
-package com.example.tmdbclient.presentation.di
+package com.example.tmdbclient.presentation.di.core
 
 import com.example.tmdbclient.data.data.api.TMDBService
 import com.example.tmdbclient.data.data.repository.artist.datasource.ArtistRemoteDataSource
@@ -10,7 +10,6 @@ import com.example.tmdbclient.data.data.repository.tvshow.datasourceImpl.TvShowR
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
-
 
 @Module
 class RemoteDataModule(private val apiKey: String) {
